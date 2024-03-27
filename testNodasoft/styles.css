@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  background: #C0DBD9;
+  height: 100vh;
+
+}
+
+.container {
+  max-width: 1170px;
+  width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  padding: 30px;
+  background: #7FAFF6;
+}
+
+.wrapper .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  height: 100vh;
+}
+
+.header_popupBtn {
+  background: #A5C7F9;
+  border: none;
+  outline: none;
+  padding: 8px 15px 8px 15px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  text-align: left;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 400px;
+  height: 400px;
+  background-color: #FFF;
+  z-index: 9999;
+  font-family: Roboto;
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 62.11px;
+}
+
+.popup:target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_close {
+  width: 43px;
+  height: 39px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #FFF;
+  background: #7FAFF6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  background: #B3F95A;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8AD191;
+  height: 198px;
+}
+
+.box::after {
+  font-family: Roboto;
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 62.11px;
+  color: #FFFFFF;
+}
+
+.box1::after {
+  content: "1";
+}
+
+.box2::after {
+  content: "2";
+}
+
+.box3::after {
+  content: "3";
+}
+
+.box4::after {
+  content: "4";
+}
+
+.box5::after {
+  content: "5";
+}
+
+.box1 {
+  grid-area: 1 / 1 / 4 / 5;
+}
+
+.box2 {
+  grid-area: 1 / 5 / 4 / 11;
+}
+
+.box3 {
+  grid-area: 4 / 1 / 7 / 11;
+}
+
+.box4 {
+  grid-area: 4 / 11 / 7 / 13;
+}
+
+.box5 {
+  grid-area: 1 / 11 / 4 / 13;
+}
+
+.blue {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 30px;
+  background: #88B5BF;
+}
+.blue1 {
+  flex: 1 0 calc((1080px - 3 * 30px) / 4); 
+  max-width: calc((1080px - 3 * 30px) / 4); 
+  aspect-ratio: 255 / 199; 
+  background: #0D89B0;
+}
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 100px;
+  background: #7FAFF6;
+}
